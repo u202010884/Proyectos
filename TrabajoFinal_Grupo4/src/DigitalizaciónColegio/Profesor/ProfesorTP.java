@@ -5,8 +5,8 @@ public class ProfesorTP extends Profesor {
     private int horasTrabajadas;
     private double tarifaHora;
 
-    public ProfesorTP(String codigo, String nombre, String apellido, String correo, String nivel, String especialidad, int horasTrabajadas, double tarifaHora) {
-        super(codigo, nombre, apellido, correo, nivel, especialidad);
+    public ProfesorTP(String codigo, String nombre, String apellido, String correo, String especialidad, int horasTrabajadas, double tarifaHora) {
+        super(codigo, nombre, apellido, correo, especialidad);
         this.horasTrabajadas = horasTrabajadas;
         this.tarifaHora = tarifaHora;
     }

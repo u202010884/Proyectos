@@ -4,15 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Colegio {
+    private static Colegio colegio = new Colegio();
+    private String nombre;
+    private static List<Profesor> profesores;
 
-    private List<Profesor> profesores;
 
-    public Colegio() {
-        this.profesores = new ArrayList<>();
+    public static Colegio obtenerInstancia(String nombre){
+        colegio.setNombre(nombre);
+        profesores = new ArrayList<>();
+        return colegio;
     }
 
-    public List<Profesor> getProfesores() {
-        return profesores;
+
+    public List<Profesor> getProfesores() {return profesores;
     }
 
     public void setProfesores(List<Profesor> profesores) {
@@ -23,12 +27,27 @@ public class Colegio {
         profesores.add(profesor);
     }
 
-    public Profesor obtenerDatosXCodigoProfesor(String codigo){
+    public static Profesor obtenerDatosXDNIProfesor(String codigo){
         for(Profesor profesor: profesores){
-            if(profesor.getCodigo().equals(codigo)){
+            if(profesor.getDni().equals(codigo)){
                 return profesor;
             }
         }return null;
+
+    }
+
+
+
+
+
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 

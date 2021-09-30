@@ -2,28 +2,26 @@ package DigitalizaciónColegio.Profesor;
 
 public abstract class Profesor {
 
-    private String codigo;
+    private String dni;
     private String nombre;
     private String apellido;
     private String correo;
-    private String nivel;
     private String especialidad;
 
     public Profesor() {
     }
 
-    public Profesor(String codigo, String nombre, String apellido, String correo, String nivel, String especialidad) {
-        this.codigo = codigo;
+    public Profesor(String dni, String nombre, String apellido, String correo, String especialidad) {
+        this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
-        this.nivel = nivel;
         this.especialidad = especialidad;
     }
 
     public String obetenerDatos() {
-        return "Codigo de docente: " + codigo + " Datos del docente: " + nombre + " " + apellido
-                + " Correo del profesor: " +correo + " Nivel: " + nivel + " Especalidad ";
+        return "DNI de docente: " + dni + '\n' + "Datos del docente: " + nombre + " " + apellido
+                + '\n' + "Correo del profesor: " +correo + '\n' + "Especalidad " + especialidad+ " "+ '\n' + "Lista de Cursos: " + '\n' +obtenerCursoxEspecialidad() + '\n'  ;
     }
 
     public double calcularBonoEspecialidad() {
@@ -36,34 +34,55 @@ public abstract class Profesor {
             case "Ciencias":
                 bono = 1.07;
                 break;
-            case "Lenguaje":
+            case "Letras":
                 bono = 1.06;
                 break;
-            case "Idiomas":
+            case "Lenguaje":
                 bono = 1.05;
                 break;
-            case "Historia":
+            case "Idiomas":
                 bono = 1.04;
                 break;
-            case "Religión":
+            case "Educacion Fisica":
                 bono = 1.03;
                 break;
-            case "Educacion fisica":
-                bono = 1.02;
-                break;
         }return bono;
+    }
+
+    public String obtenerCursoxEspecialidad(){
+        String curso = null;
+        switch (especialidad){
+            case "Matematica":
+                curso = "Geometria " + '\n' +"Aritmetica" + '\n' + "Trigonometria" + '\n' + "Algebra" + '\n' +"Estadistica";
+            break;
+            case "Ciencias":
+                curso = "Fisica 1 " + '\n' + "Fisica 2 " + '\n' + "Fisica 3"+ '\n' +" Quimica1" + '\n' + "Quimica2" + '\n' +"Biologia";
+                break;
+            case "Letras":
+                curso = "Literatura" + '\n' + "Filosofia" + '\n' + "Historia1" + '\n' + "Historia2";
+                break;
+            case "Lenguaje":
+                curso = "Redacción" + '\n' + "Razonamiento Verbal" + '\n' + "Lenguaje1" + '\n' +"Lenguaje2";
+                break;
+            case  "Idiomas":
+                curso = "Ingles1" + '\n' +"Ingles2"+ '\n' + "Frances"+ '\n' +"Portugues";
+                break;
+            case "Educación Fisica":
+                curso = "Atletismo" + '\n' + "Futbol" + '\n' + "Basquet" + '\n' +"Voley";
+                break;
+        }return curso;
     }
 
     public double calcularSueldoFinal() {
         return 0;
     }
 
-    public String getCodigo() {
-        return codigo;
+    public String getDni() {
+        return dni;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
+    public void setDni(String dni) {
+        this.dni = dni;
     }
 
     public String getNombre() {
@@ -88,14 +107,6 @@ public abstract class Profesor {
 
     public void setCorreo(String correo) {
         this.correo = correo;
-    }
-
-    public String getNivel() {
-        return nivel;
-    }
-
-    public void setNivel(String nivel) {
-        this.nivel = nivel;
     }
 
     public String getEspecialidad() {
