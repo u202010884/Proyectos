@@ -21,7 +21,7 @@ public abstract class Profesor {
 
     public String obetenerDatos() {
         return "DNI de docente: " + dni + '\n' + "Datos del docente: " + nombre + " " + apellido
-                + '\n' + "Correo del profesor: " +correo + '\n' + "Especalidad " + especialidad+ " "+ '\n' + "Lista de Cursos: " + '\n' +obtenerCursoxEspecialidad() + '\n'  ;
+                + '\n' + "Correo del profesor: " +correo + '\n' + "Especalidad " + especialidad+ " "+ '\n' + "Lista de Cursos: " + '\n' +obtenerCursoxEspecialidad() + '\n';
     }
 
     public double calcularBonoEspecialidad() {

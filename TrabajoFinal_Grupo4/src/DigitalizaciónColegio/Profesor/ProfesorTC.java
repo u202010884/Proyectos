@@ -13,7 +13,7 @@ public class ProfesorTC extends Profesor {
 
 
     public String obetenerDatos() {
-        return super.obetenerDatos() + "Sueldo final: " + calcularSueldoFinal();
+        return super.obetenerDatos() + "Sueldo final: " + calcularSueldoFinal()+ '\n';
     }
 
     public double calcularSueldoFinal() {

@@ -12,7 +12,7 @@ public class View {
     }
 
     public void mostrarDatosProfesor(Profesor profesor) {
-        System.out.println("--------------------------------");
+        System.out.println();
         System.out.println("Tus datos registrados son:" + '\n' + profesor.obetenerDatos());
     }
 }
