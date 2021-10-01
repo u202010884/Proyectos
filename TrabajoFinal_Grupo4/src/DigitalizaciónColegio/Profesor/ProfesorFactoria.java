@@ -1,7 +1,7 @@
 package DigitalizaciónColegio.Profesor;
 
 public class ProfesorFactoria {
-    public static Profesor crear(String... args){
+    public static Profesor crear(String... args) throws SueldoMaximoException{
         Profesor profesor = null;
         switch (args[0]){
             case "ProfesorTC":

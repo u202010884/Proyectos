@@ -11,7 +11,7 @@ public class View {
         System.out.println("-------------------------");
     }
 
-    public void mostrarDatosProfesor(Profesor profesor) {
+    public void mostrarDatosProfesor(Profesor profesor) throws SueldoMaximoException{
         System.out.println();
         System.out.println("Tus datos registrados son:" + '\n' + profesor.obetenerDatos());
     }

@@ -19,7 +19,7 @@ public abstract class Profesor {
         this.especialidad = especialidad;
     }
 
-    public String obetenerDatos() {
+    public String obetenerDatos(){
         return "DNI de docente: " + dni + '\n' + "Datos del docente: " + nombre + " " + apellido
                 + '\n' + "Correo del profesor: " +correo + '\n' + "Especalidad " + especialidad+ " "+ '\n' + "Lista de Cursos: " + '\n' +obtenerCursoxEspecialidad() + '\n';
     }
@@ -41,10 +41,10 @@ public abstract class Profesor {
                 bono = 1.05;
                 break;
             case "Idiomas":
-                bono = 1.04;
+                bono = 1.045;
                 break;
             case "Educacion Fisica":
-                bono = 1.03;
+                bono = 1.04;
                 break;
         }return bono;
     }
@@ -56,7 +56,7 @@ public abstract class Profesor {
                 curso = "Geometria " + '\n' +"Aritmetica" + '\n' + "Trigonometria" + '\n' + "Algebra" + '\n' +"Estadistica";
             break;
             case "Ciencias":
-                curso = "Fisica 1 " + '\n' + "Fisica 2 " + '\n' + "Fisica 3"+ '\n' +" Quimica1" + '\n' + "Quimica2" + '\n' +"Biologia";
+                curso = "Fisica 1 " + '\n' + "Fisica 2 " + '\n' + "Fisica 3"+ '\n' +"Quimica1" + '\n' + "Quimica2" + '\n' +"Biologia";
                 break;
             case "Letras":
                 curso = "Literatura" + '\n' + "Filosofia" + '\n' + "Historia1" + '\n' + "Historia2";
@@ -67,15 +67,13 @@ public abstract class Profesor {
             case  "Idiomas":
                 curso = "Ingles1" + '\n' +"Ingles2"+ '\n' + "Frances"+ '\n' +"Portugues";
                 break;
-            case "Educación Fisica":
+            case "Educacion Fisica":
                 curso = "Atletismo" + '\n' + "Futbol" + '\n' + "Basquet" + '\n' +"Voley";
                 break;
         }return curso;
     }
 
-    public double calcularSueldoFinal() {
-        return 0;
-    }
+    public abstract double calcularSueldoFinal();
 
     public String getDni() {
         return dni;

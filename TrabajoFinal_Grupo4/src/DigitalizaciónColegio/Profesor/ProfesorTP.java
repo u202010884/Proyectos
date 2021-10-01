@@ -16,7 +16,7 @@ public class ProfesorTP extends Profesor {
     }
 
     @Override
-    public String obetenerDatos() {
+    public String obetenerDatos(){
         return super.obetenerDatos() + "Sueldo final: " + calcularSueldoFinal();
     }
 

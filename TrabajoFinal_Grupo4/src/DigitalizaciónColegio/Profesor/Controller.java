@@ -9,13 +9,13 @@ public class Controller {
         view = new View();
     }
 
-    public void registrarProfesor(String... arg) {
+    public void registrarProfesor(String... arg) throws SueldoMaximoException{
         Profesor profesor = ProfesorFactoria.crear(arg);
         colegio.registrarProfesor(profesor);
     }
 
-    public void buscarXDNIProfesor(){
-        Profesor profesor = Colegio.obtenerDatosXDNIProfesor("A123");
+    public void buscarXDNIProfesor() throws SueldoMaximoException {
+        Profesor profesor = Colegio.obtenerDatosXDNIProfesor("45708997");
         view.mostrarDatosProfesor(profesor);
     }
 

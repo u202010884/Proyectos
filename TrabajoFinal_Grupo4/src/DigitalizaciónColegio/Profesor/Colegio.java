@@ -20,10 +20,12 @@ public class Colegio {
     }
 
     public void setProfesores(List<Profesor> profesores) {
+
         this.profesores = profesores;
     }
 
     public void registrarProfesor(Profesor profesor) {
+
         profesores.add(profesor);
     }
 
@@ -35,12 +37,6 @@ public class Colegio {
         }return null;
 
     }
-
-
-
-
-
-
 
     public String getNombre() {
         return nombre;
